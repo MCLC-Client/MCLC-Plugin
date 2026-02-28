@@ -1,0 +1,9 @@
+name: MCLC
+version: '${version}'
+main: de.scholle.mclc.MCLC
+prefix: MCLC
+load: STARTUP
+authors: [ Mobilestars ]
+description: The official Plugin of MCLC.
+website: mclc.pluginhub.de
+softdepend: [ PlaceholderAPI ]

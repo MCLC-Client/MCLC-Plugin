@@ -1,0 +1,5 @@
+name: MCLC
+version: '${version}'
+main: de.scholle.mclc.bungee.MCLCBungeePlugin
+author: Mobilestars
+description: The official Plugin of MCLC.

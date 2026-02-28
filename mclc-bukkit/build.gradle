@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+dependencies {
+    implementation project(':mclc-common')
+
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    implementation 'org.bstats:bstats-bukkit:3.2.1'
+}
+
+tasks.shadowJar {
+    archiveClassifier.set('')
+    configurations = [project.configurations.runtimeClasspath]
+
+    dependencies {
+        exclude { it.moduleGroup != 'org.bstats' }
+    }
+
+    relocate('org.bstats', project.group.toString() + '.libs.bstats')
+}
+
+tasks.build {
+    dependsOn tasks.shadowJar
+}

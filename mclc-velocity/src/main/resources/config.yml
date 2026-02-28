@@ -1,0 +1,5 @@
+server-list:
+  motd: "&aMCLC Netzwerk\\n&7Willkommen auf dem Velocity-Proxy"
+  favicon:
+    enabled: true
+    path: "server-icon.png"
